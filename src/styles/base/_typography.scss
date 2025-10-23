@@ -34,6 +34,9 @@ html {
 
 body {
   font-size: 32px;
+  font-family: var(--font-secondary);
+  line-height: var(--lh-130);
+  color: var(--color-dark);
 }
 
 a {

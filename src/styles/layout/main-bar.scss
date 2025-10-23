@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+.main-bar {
+  display: flex;
+  align-items: flex-end;
+  column-gap: var(--spacing-10);
+
+  position: absolute;
+  bottom: var(--spacing-20);
+  left: var(--spacing-20);
+}

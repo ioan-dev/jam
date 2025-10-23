@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.tabs-container {
+
+  .tabs-header {
+    display: flex;
+    column-gap: 6px;
+    row-gap: 6px;
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+  }
+
+  .tab-button {
+
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 450;
+    padding: 10px;
+    // Смещение для шрифта
+    padding-bottom: 8px;
+    background-color: transparent;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-6);
+    color: var(--color-dark);
+
+    &.is-active {
+      background: var(--color-gray);
+    }
+
+    @include hover {
+      background-color: var(--color-gray);
+    }
+  }
+
+  .tab-panel {
+    display: none;
+
+    .text-base {
+      max-width: 380px;
+    }
+  }
+
+  .tab-panel.is-active {
+    display: block;
+  }
+}

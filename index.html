@@ -1,16 +1,558 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
-<body>
+<body class="home">
+
+<!--Header-->
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo">
+      <svg width="100%" height="100%" viewBox="0 0 126 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M126.001 32.846C126.001 35.4413 123.921 37.5426 121.358 37.5426C118.795 37.5426 116.715 35.4386 116.715 32.846C116.715 30.2534 118.795 28.1494 121.358 28.1494C123.921 28.1494 126.001 30.2534 126.001 32.846Z"
+          fill="currentColor" />
+        <path
+          d="M99.7712 6.3623C95.3533 6.3623 91.4183 8.43857 88.8609 11.6751C86.3721 9.35457 83.0491 7.93616 79.3968 7.93616C76.6226 7.93616 74.0405 8.75778 71.8699 10.1679C71.5983 8.95486 71.28 7.80015 70.9068 6.6954L63.7559 9.17137C64.4748 11.2976 65.4325 14.9477 65.4325 22.0509V37.5424H72.9895V22.0648C72.9895 18.484 75.8597 15.5834 79.3968 15.5834C82.9338 15.5834 85.8041 18.4868 85.8041 22.0648V37.5424H93.3611V20.4909C93.3611 16.9102 96.2286 14.0095 99.7684 14.0095C103.308 14.0095 106.176 16.913 106.176 20.4909V37.5424H113.733V20.4909C113.733 12.6883 107.479 6.3623 99.7684 6.3623H99.7712Z"
+          fill="currentColor" />
+        <path
+          d="M18.3218 0.5V26.4311C18.3218 31.075 14.5872 34.8556 9.99373 34.8556C7.72716 34.8556 5.67189 33.934 4.17091 32.4462L0 38.9082C2.73305 41.151 6.20972 42.5 9.99647 42.5C18.7554 42.5 25.8816 35.2914 25.8816 26.4311V0.5H18.3246H18.3218Z"
+          fill="currentColor" />
+        <path
+          d="M38.7363 30.7556C35.737 29.3761 35.4901 24.5213 40.4156 24.1798C42.8523 24.0105 46.318 24.8682 49.5285 29.0346C46.7735 31.4856 42.0757 32.2934 38.7363 30.7556ZM58.8829 28.4684C63.0154 17.4653 62.1016 7.82507 55.6147 4.16663C49.287 0.599776 39.9162 2.90365 34.0111 9.3795L39.6418 14.5091C44.271 9.45167 49.169 8.95758 51.8637 10.8146C54.2537 12.4634 54.7751 16.3133 53.1479 21.937C49.9703 19.1252 46.6253 17.4125 43.0718 16.763C35.652 15.414 30.3176 19.7053 28.7041 24.5907C26.4979 31.2664 31.2259 39.2911 42.9044 39.2911C48.0001 39.2911 52.6128 36.4903 54.1906 35.0969C54.6763 35.863 55.1592 36.693 55.6422 37.5368H63.641C62.5653 33.8117 60.1287 30.2116 58.8856 28.4628L58.8829 28.4684Z"
+          fill="currentColor" />
+      </svg>
+    </a>
+    <div class="header__caption">
+      Мануфактура креативных решений для бизнеса
+    </div>
+    <button class="header__button btn">Связаться</button>
+  </div>
+</header>
 
 <!--MAIN-->
 <main class="main">
+
+  <div class="main-slider">
+    <img src="/images/home-bg-01.jpg" alt="">
+  </div>
+
+  <div class="main-bar">
+    <!--Home bar-->
+    <div class="bar">
+      <div class="bar__buttons">
+        <!--Скорее всего буду считывать data атрибуты и включать модалку соответсвующую-->
+        <button class="bar__button is-active">Главная</button>
+        <button class="bar__button">Проекты</button>
+        <button class="bar__button">Услуги</button>
+        <button class="bar__button">О нас</button>
+        <button class="bar__button">Контакты</button>
+      </div>
+      <div class="bar__dotter">
+        <img src="/public/images/icons/dotter.svg" alt="">
+      </div>
+    </div>
+    <!--Slider toggle-->
+    <div class="slider-toggle">
+      <button class="slider-toggle__btn is-active">J</button>
+      <button class="slider-toggle__btn">A</button>
+      <button class="slider-toggle__btn">M</button>
+
+    </div>
+  </div>
+
+  <div class="modal" data-modal="about">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 class="modal__title">О нас</h2>
+        <button class="modal__close">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.998 17L0.998044 0.999995" stroke="currentColor" stroke-width="1.5" />
+            <path d="M17 1L0.999996 17" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__body">
+        <div class="modal__intro">
+          <h2 class="title-big">Делаем так, чтобы в вашу компанию влюбились.</h2>
+          <p class="text-base">Наша команда 25 лет создаёт впечатления для российских и зарубежных корпораций: от
+            запоминающихся подарков до масштабных праздников.</p>
+          <div class="modal__intro-features">
+            <div class="features features--grid">
+              <div class="features__item">
+                <div class="features__icon">
+                  <img src="/images/icons/icons-01.svg" alt="">
+                </div>
+                <h3 class="features__title title-medium">15 лет</h3>
+                <p class="features__text text-small">Функционально разнесены лишь базовые сценарии поведения
+                  пользователей.</p>
+              </div>
+              <div class="features__item">
+                <div class="features__icon">
+                  <img src="/images/icons/icons-02.svg" alt="">
+                </div>
+                <h3 class="features__title title-medium">230</h3>
+                <p class="features__text text-small">Функционально разнесены лишь базовые сценарии поведения
+                  пользователей.</p>
+              </div>
+              <div class="features__item">
+                <div class="features__icon">
+                  <img src="/images/icons/icons-03.svg" alt="">
+                </div>
+                <h3 class="features__title title-medium">10 тыс</h3>
+                <p class="features__text text-small">Функционально разнесены лишь базовые сценарии поведения
+                  пользователей.</p>
+              </div>
+              <div class="features__item">
+                <div class="features__icon">
+                  <img src="/images/icons/icons-04.svg" alt="">
+                </div>
+                <h3 class="features__title title-medium">2,3 млн</h3>
+                <p class="features__text text-small">Функционально разнесены лишь базовые сценарии поведения
+                  пользователей.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="modal__content">
+          <h2 class="title-big">Почему JAM?</h2>
+          <div class="modal__image">
+            <img src="/images/modal-image.jpg" alt="">
+          </div>
+
+          <div class="modal__features">
+            <div class="features features--list">
+              <div class="features__item">
+                <p class="features__title text-base">Решения вне рамок</p>
+                <div class="features__text text-small is-text-gray">С ним приходит свобода. Наша команда — яркие
+                  специалисты с багажом знаний и опыта в международных агентствах, крупных брендах и собственных
+                  бизнес-проектах.
+                </div>
+              </div>
+              <div class="features__item">
+                <p class="features__title text-base">Решения вне рамок</p>
+                <div class="features__text text-small is-text-gray">С ним приходит свобода. Наша команда — яркие
+                  специалисты с багажом знаний и опыта в международных агентствах, крупных брендах и собственных
+                  бизнес-проектах.
+                </div>
+              </div>
+              <div class="features__item">
+                <p class="features__title text-base">Решения вне рамок</p>
+                <div class="features__text text-small is-text-gray">С ним приходит свобода. Наша команда — яркие
+                  специалисты с багажом знаний и опыта в международных агентствах, крупных брендах и собственных
+                  бизнес-проектах.
+                </div>
+              </div>
+              <div class="features__item">
+                <p class="features__title text-base">Решения вне рамок</p>
+                <div class="features__text text-small is-text-gray">С ним приходит свобода. Наша команда — яркие
+                  специалисты с багажом знаний и опыта в международных агентствах, крупных брендах и собственных
+                  бизнес-проектах.
+                </div>
+              </div>
+              <div class="features__item">
+                <p class="features__title text-base">Решения вне рамок</p>
+                <div class="features__text text-small is-text-gray">С ним приходит свобода. Наша команда — яркие
+                  специалисты с багажом знаний и опыта в международных агентствах, крупных брендах и собственных
+                  бизнес-проектах.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__content">
+          <div class="modal__text-wrapper">
+            <h2 class="title-medium">JAM — не про варенье.</h2>
+            <div class="text-base">Джемом называют сессию импровизации, когда музыканты без плана и подготовки создают
+              крутое звучание в моменте — здесь и сейчас.
+            </div>
+          </div>
+          <div class="modal__team">
+            <div class="modal__team-item">
+              <div class="modal__team-image">
+                <img src="/images/modal-team.jpg" alt="">
+              </div>
+
+              <div class="modal__team-text-wrapper">
+                <p class="modal__team-name text-base">Игорь Ивашевич</p>
+                <p class="modal__team-post text-small">CEO</p>
+              </div>
+
+            </div>
+            <div class="modal__team-item">
+              <div class="modal__team-image">
+                <img src="/images/modal-team.jpg" alt="">
+              </div>
+
+              <div class="modal__team-text-wrapper">
+                <p class="modal__team-name text-base">Игорь Ивашевич</p>
+                <p class="modal__team-post text-small">CEO</p>
+              </div>
+
+            </div>
+            <div class="modal__team-item">
+              <div class="modal__team-image">
+                <img src="/images/modal-team.jpg" alt="">
+              </div>
+
+              <div class="modal__team-text-wrapper">
+                <p class="modal__team-name text-base">Игорь Ивашевич</p>
+                <p class="modal__team-post text-small">CEO</p>
+              </div>
+
+            </div>
+            <div class="modal__team-item">
+              <div class="modal__team-image">
+                <img src="/images/modal-team.jpg" alt="">
+              </div>
+
+              <div class="modal__team-text-wrapper">
+                <p class="modal__team-name text-base">Игорь Ивашевич</p>
+                <p class="modal__team-post text-small">CEO</p>
+              </div>
+
+            </div>
+            <div class="modal__team-item">
+              <div class="modal__team-image">
+                <img src="/images/modal-team.jpg" alt="">
+              </div>
+
+              <div class="modal__team-text-wrapper">
+                <p class="modal__team-name text-base">Игорь Ивашевич</p>
+                <p class="modal__team-post text-small">CEO</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal__content">
+          <h2 class="title-big">Чтобы все получилось, пригодятся:</h2>
+          <div class="modal__features">
+            <div class="features features--list">
+              <div class="features__item">
+                <p class="features__title text-base">Ценный опыт</p>
+                <div class="features__text text-small">С ним приходит свобода. Наша команда — яркие
+                  специалисты с багажом знаний и опыта в международных агентствах, крупных брендах и собственных
+                  бизнес-проектах.
+                </div>
+              </div>
+              <div class="features__item">
+                <p class="features__title text-base">Слаженная работа</p>
+                <div class="features__text text-small">В нашей сфере важно работать как часовой механизм:
+                  один ваш запрос — и мы точно знаем, где найти нужный контакт, подходящую локацию и лучшего поставщика.
+                </div>
+              </div>
+              <div class="features__item">
+                <p class="features__title text-base">Абсолютная любовь к своему делу</p>
+                <div class="features__text text-small">Когда мерч превращается в любимую толстовку, а
+                  новогодний корпоратив называют самой стильной вечеринкой года — мы понимаем, что выбрали карьеру по
+                  душе.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__image">
+            <img src="/images/modal-image.jpg" alt="">
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="modal" data-modal="services">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 class="modal__title">О нас</h2>
+        <button class="modal__close">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.998 17L0.998044 0.999995" stroke="currentColor" stroke-width="1.5" />
+            <path d="M17 1L0.999996 17" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="tabs-container">
+            <div class="tabs-header">
+              <button class="tab-button">Мероприятия</button>
+              <button class="tab-button">Брендинг</button>
+              <button class="tab-button">Сувенирка</button>
+            </div>
+            <div class="tabs-content">
+              <div class="tab-panel">
+                <div class="modal__intro">
+                  <h2 class="title-big">Организовываем любые мероприятия</h2>
+                  <div class="text-base">
+                    Каждый из нас понимает очевидную вещь: современная методология разработки требует определения
+                    и уточнения поставленных обществом задач. С другой стороны.
+                  </div>
+                  <div class="features features--list-small">
+                    <div class="features__item">
+                      <p class="text-small">Аналитика и аудит</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Бренд-стратегия</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Позиционирование</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Digital-стратегия</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Нейминг</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__projects">
+                  <h3 class="title-medium">Проекты в этой области</h3>
+                  <div class="modal__projects-list">
+                    <a href="/" class="modal__projects-item">
+                      <div class="modal__image">
+                        <img src="/images/modal-image.jpg" alt="">
+                      </div>
+                      <div class="modal__projects-info">
+                        <h4 class="text-base">Газпром</h4>
+                        <div class="text-small is-text-gray">
+                          <p>Помогаем вам осуществить ваши креативные замыслы и портфолио.</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="/" class="modal__projects-item">
+                      <div class="modal__image">
+                        <img src="/images/modal-image.jpg" alt="">
+                      </div>
+                      <div class="modal__projects-info">
+                        <h4 class="text-base">Газпром</h4>
+                        <div class="text-small is-text-gray">
+                          <p>Помогаем вам осуществить ваши креативные замыслы и портфолио.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel">
+                <div class="modal__intro">
+                  <h2 class="title-big">Организовываем любые мероприятия 2</h2>
+                  <div class="text-base">
+                    Каждый из нас понимает очевидную вещь: современная методология разработки требует определения
+                    и уточнения поставленных обществом задач. С другой стороны.
+                  </div>
+                  <div class="features features--list-small">
+                    <div class="features__item">
+                      <p class="text-small">Аналитика и аудит</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Бренд-стратегия</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Позиционирование</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Digital-стратегия</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Нейминг</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__projects">
+                  <h3 class="title-medium">Проекты в этой области</h3>
+                  <div class="modal__projects-list">
+                    <a href="/" class="modal__projects-item">
+                      <div class="modal__image">
+                        <img src="/images/modal-image.jpg" alt="">
+                      </div>
+                      <div class="modal__projects-info">
+                        <h4 class="text-base">Газпром</h4>
+                        <div class="text-small is-text-gray">
+                          <p>Помогаем вам осуществить ваши креативные замыслы и портфолио.</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="/" class="modal__projects-item">
+                      <div class="modal__image">
+                        <img src="/images/modal-image.jpg" alt="">
+                      </div>
+                      <div class="modal__projects-info">
+                        <h4 class="text-base">Газпром</h4>
+                        <div class="text-small is-text-gray">
+                          <p>Помогаем вам осуществить ваши креативные замыслы и портфолио.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel">
+                <div class="modal__intro">
+                  <h2 class="title-big">Организовываем любые мероприятия 3</h2>
+                  <div class="text-base">
+                    Каждый из нас понимает очевидную вещь: современная методология разработки требует определения
+                    и уточнения поставленных обществом задач. С другой стороны.
+                  </div>
+                  <div class="features features--list-small">
+                    <div class="features__item">
+                      <p class="text-small">Аналитика и аудит</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Бренд-стратегия</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Позиционирование</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Digital-стратегия</p>
+
+                    </div>
+                    <div class="features__item">
+                      <p class="text-small">Нейминг</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__projects">
+                  <h3 class="title-medium">Проекты в этой области</h3>
+                  <div class="modal__projects-list">
+                    <a href="/" class="modal__projects-item">
+                      <div class="modal__image">
+                        <img src="/images/modal-image.jpg" alt="">
+                      </div>
+                      <div class="modal__projects-info">
+                        <h4 class="text-base">Газпром</h4>
+                        <div class="text-small is-text-gray">
+                          <p>Помогаем вам осуществить ваши креативные замыслы и портфолио.</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="/" class="modal__projects-item">
+                      <div class="modal__image">
+                        <img src="/images/modal-image.jpg" alt="">
+                      </div>
+                      <div class="modal__projects-info">
+                        <h4 class="text-base">Газпром</h4>
+                        <div class="text-small is-text-gray">
+                          <p>Помогаем вам осуществить ваши креативные замыслы и портфолио.</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="modal is-active" data-modal="form">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 class="modal__title">Форма</h2>
+        <button class="modal__close">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.998 17L0.998044 0.999995" stroke="currentColor" stroke-width="1.5" />
+            <path d="M17 1L0.999996 17" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal__body">
+        <div class="modal__intro">
+          <h2 class="title-big">Отправить заявку</h2>
+          <p class="text-base">Каждый из нас понимает очевидную вещь: современная методология разработки.</p>
+        </div>
+        <div class="modal__form">
+          <form class="contact-form" action="/submit" method="POST">
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Имя"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Телефон</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Телефон"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Электронная почта</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Электронная почта"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="question">Ваш вопрос</label>
+              <textarea
+                id="question"
+                name="question"
+                rows="5"
+                required
+                placeholder="Ваш вопрос"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">
+              Отправить
+            </button>
+          </form>
+          <div class="modal__information text-base">
+              Нажимая на кнопку, вы даете <a href="/">согласие на обработку персональных данных</a> и соглашаетесь с <a
+              href="/">политикой конфиденциальности.</a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
 
 </main>
 

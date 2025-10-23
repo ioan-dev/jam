@@ -9,10 +9,25 @@
 // Black/Heavy - 900
 
 
+// Путь до шрифтов
+// CMS ../fonts
+// Vite /fonts
+
+$font-path: '/fonts';
+
+
 @font-face {
-  font-family: 'MyFont';
-  //src: url(var(--font-primary)) format('woff2');
-  font-weight: 400;
+  font-family: AtypText;
+  src: url('#{$font-path}/atyp-text.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Suisse;
+  src: url('#{$font-path}/suisse.woff2') format('woff2');
+  font-weight: 450;
   font-style: normal;
   font-display: swap;
 }

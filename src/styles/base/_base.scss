@@ -1,7 +1,6 @@
 @use "../abstracts" as *;
 
 html {
-
   // Блокируем скролл страницы
   &.is-lock {
     overflow: hidden !important;
@@ -12,8 +11,14 @@ body {
   display: flex;
   flex-direction: column;
 
-  background-color: tomato;
+  background-color: var(--color-gray-light);
+
+  height: 100vh;
+  overflow: hidden;
+
+  scrollbar-width: none;
 }
+
 
 main {
   // Прибиваем footer в низ страницы

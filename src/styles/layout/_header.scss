@@ -5,6 +5,54 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    padding: var(--spacing-20);
+  }
+
+  &__logo {
+    color: var(--color-white);
+    width: 126px;
+    height: 42px;
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__caption {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: var(--lh-110);
+    letter-spacing: var(--ls-2);
+    font-size: 18px;
+
+    margin-right: auto;
+    margin-left: 107px;
+    max-width: 367px;
+  }
+
+  &__dot-caption {
+    font-family: var(--font-secondary);
+    line-height: var(--lh-100);
+    font-size: 16px;
+    font-weight: 450;
+    //padding-left: 18px;
+    position: relative;
+
+    display: flex;
+    align-items: baseline;
+    column-gap: 8px;
+
+
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: var(--color-dark);
+      border-radius: 50%;
+      flex: none;
+    }
   }
 
   &__overlay {
@@ -37,6 +85,12 @@
     &.is-active {
       color: tomato;
       pointer-events: none;
+    }
+  }
+
+  &--projects {
+    .header__caption {
+      color: var(--color-dark);
     }
   }
 }

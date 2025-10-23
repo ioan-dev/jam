@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  //@include mobile {
+  //  grid-template-columns: repeat(, 1fr);
+  //}
+
+}
+
+// Text
+
+.is-text-light {
+  color: var(--color-white);
+}
+
+.is-text-dark {
+  color: var(--color-dark);
+}
+
+.is-text-gray {
+  color: var(--color-gray-dark);
+}
+
+// Bg
+
+.is-bg-white {
+  background-color: var(--color-white);
+}
+
+.is-bg-dark {
+  background-color: var(--color-dark);
+}
+
+.is-bg-gray {
+  background-color: var(--color);
+}
+
+.is-bg-gray-light {
+  background-color: var(--color-gray-light);
+}
+
+// Title
+
+.title-big, .title-medium {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  line-height: var(--lh-90);
+  letter-spacing: var(--ls-2);
+}
+
+.title-big {
+  font-size: 40px;
+}
+
+.title-medium {
+  font-size: 28px;
+}
+
+// Text
+
+.text-big, .text-base, .text-small {
+  font-family: var(--font-secondary);
+  font-weight: 450;
+  line-height: var(--lh-130);
+  letter-spacing: var(--ls-2);
+}
+
+
+.text-base {
+  font-size: 16px;
+}
+
+.text-small {
+  font-size: 13px;
+  line-height: var(--lh-120);
+}
+
+
+
+
+// DEV
+
+.dev-hidden {
+  display: none !important;
+}
+
+.dev-outline {
+  outline: tomato solid 1px;
+}

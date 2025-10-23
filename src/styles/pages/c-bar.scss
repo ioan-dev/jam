@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.c-bar {
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bar {
+    background-color: var(--color-gray);
+    border-radius: var(--radius-6);
+    min-width: 110px;
+    cursor: pointer;
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+    }
+
+    // Думаю переключать с помощью flip состояние is-active и анимировать размеры bar
+
+    &__button {
+      //---Свернутое состояние
+      //display: inline-flex;
+      display: none;
+      //---
+      align-items: center;
+      justify-content: center;
+      padding-inline: 16px;
+      padding-block: 10px;
+      // Визуальная компенсация для шрифта
+      padding-top: 14px;
+      border: none;
+      background-color: transparent;
+      border-radius: var(--radius-6);
+      font-size: 16px;
+      line-height: var(--lh-100);
+
+      &.is-active {
+        background-color: var(--color-white);
+        display: inline-flex;
+      }
+    }
+
+
+    &__dotter {
+      padding-block: 6px;
+
+      img {
+        width: 46px;
+        height: 13px;
+        margin-inline: auto;
+      }
+    }
+  }
+}

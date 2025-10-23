@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.filters {
+  display: flex;
+  column-gap: 6px;
+
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 4px;
+
+  background-color: var(--color-gray);
+  border-radius: var(--radius-6);
+
+  &__button {
+    display: inline-flex;
+    //---
+    align-items: center;
+    justify-content: center;
+    padding-inline: 16px;
+    padding-block: 18px;
+    border: none;
+    background-color: transparent;
+    border-radius: var(--radius-6);
+    font-size: 16px;
+    line-height: var(--lh-100);
+    color: var(--color-gray-dark);
+
+    &.is-active {
+      background-color: var(--color-white);
+      color: var(--color-dark);
+    }
+  }
+
+}

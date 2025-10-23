@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+
+  input, textarea {
+    border: none;
+    background-color: var(--color-gray-light);
+    border-radius: var(--radius-6);
+    padding: 20px;
+
+    // Смещение для шрифта
+    //padding-top: 18px;
+    width: 100%;
+
+    font-size: 16px;
+    color: var(--color-gray-dark);
+
+    &::placeholder {
+      font: inherit;
+      font-size: 16px;
+    }
+
+  }
+
+  .submit-button {
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: var(--lh-100);
+    font-family: var(--font-secondary);
+    border: none;
+    border-radius: var(--radius-6);
+    color: var(--color-white);
+    background-color: var(--color-dark);
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}
