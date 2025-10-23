@@ -26,9 +26,9 @@
 <!--MAIN-->
 <main class="main">
 
-<!--  <div class="main-slider">-->
-<!--    <img src="/images/home-bg-01.jpg" alt="">-->
-<!--  </div>-->
+  <!--  <div class="main-slider">-->
+  <!--    <img src="/images/home-bg-01.jpg" alt="">-->
+  <!--  </div>-->
 
   <div class="main-bar">
     <!--Home bar-->
@@ -47,10 +47,92 @@
     </div>
   </div>
   <div class="filters">
-    <button class="filters__button">Все</button>
+    <button class="filters__button filters__button--all">
+      <span>Все</span>
+      <span>(13)</span>
+    </button>
     <button class="filters__button is-active">Мероприятия</button>
     <button class="filters__button">Брендинг</button>
     <button class="filters__button">Сувенирка</button>
+  </div>
+
+  <div class="projects__slider">
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/modal-image.jpg" alt="">
+        </div>
+
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+
+  <div class="projects__info">
+    <div class="projects__info-text">
+      <p class="projects__title title-big">Спартакиада</p>
+      <p class="projects__description text-base is-text-gray">
+        Помогаем вам осуществить ваши креативные замыслы
+      </p>
+    </div>
+    <a class="projects__info-link text-base" href="/">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1.75 1.5V11.75H13.1289L7.90918 6.53027L8.9707 5.46973L16.001 12.5L8.9707 19.5303L7.90918 18.4697L13.1289 13.25H0.25V1.5H1.75Z"
+          fill="currentColor" />
+      </svg>
+      <span>Перейти к проекту</span>
+    </a>
+
+  </div>
+
+  <div class="projects__buttons">
+    <button class="projects__button-prev">
+      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.25 6.25V23.75H15.75V6.25H14.25Z" fill="#FF5200" />
+        <path
+          d="M15.4727 5.66809C15.1781 5.42778 14.7434 5.44524 14.4688 5.71984L5.71875 14.4698L6.7793 15.5304L14.999 7.31066L23.2188 15.5304L24.2793 14.4698L15.5293 5.71984L15.4727 5.66809Z"
+          fill="#FF5200" />
+      </svg>
+
+    </button>
+    <button class="projects__button-next">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.75 23.75L15.75 6.25L14.25 6.25L14.25 23.75L15.75 23.75Z" fill="#FF5200" />
+        <path
+          d="M14.5273 24.3319C14.8219 24.5722 15.2566 24.5548 15.5313 24.2802L24.2813 15.5302L23.2207 14.4696L15.001 22.6893L6.78125 14.4696L5.7207 15.5302L14.4707 24.2802L14.5273 24.3319Z"
+          fill="#FF5200" />
+      </svg>
+    </button>
   </div>
 
 </main>

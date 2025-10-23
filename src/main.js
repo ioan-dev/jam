@@ -1,4 +1,52 @@
 import '@/styles/main.scss'
+import Swiper from 'swiper';
+import { EffectCreative } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-creative';
+
+let initProjectSlider = new Swiper('.projects__slider .swiper', {
+  direction: 'vertical',
+  modules: [EffectCreative],
+  slidesPerView: 5,
+  mousewheel: false,
+  centeredSlides: true,
+  loop: true,
+  creativeEffect: {
+    prev: {
+      translate: [0, 0, 0],
+    },
+    next: {
+      translate: [0, '100%', 0],
+    },
+  }
+})
+
+class Filters {
+  constructor(container) {
+    this.container = container;
+    this.buttons = container.querySelectorAll('.filters__button');
+
+    this.init();
+  }
+
+  init() {
+    // Делегирование событий на контейнер
+    this.container.addEventListener('click', (e) => {
+      const button = e.target.closest('.filters__button');
+      if (button) {
+        this.setActiveButton(button);
+      }
+    });
+  }
+
+  setActiveButton(activeButton) {
+    // Убираем активный класс у всех кнопок
+    this.buttons.forEach(btn => btn.classList.remove('is-active'));
+
+    // Добавляем активный класс к выбранной кнопке
+    activeButton.classList.add('is-active');
+  }
+}
 
 class Tabs {
   constructor(container) {
@@ -64,12 +112,18 @@ class Tabs {
 
 // Инициализация
 let tabsInstance;
+let filtersInstance;
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Инициализация табов
   const tabsContainer = document.querySelector('.tabs-container');
-  tabsInstance = new Tabs(tabsContainer);
+  if (tabsContainer) {
+    tabsInstance = new Tabs(tabsContainer);
+  }
+
+  // Инициализация фильтров
+  const filtersContainer = document.querySelector('.filters');
+  if (filtersContainer) {
+    filtersInstance = new Filters(filtersContainer);
+  }
 });
-
-
-
-
-

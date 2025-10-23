@@ -28,6 +28,21 @@
     line-height: var(--lh-100);
     color: var(--color-gray-dark);
 
+    &--all {
+      column-gap: 2px;
+      align-items: flex-start;
+
+      span {
+        &:first-child {
+
+        }
+
+        &:last-child {
+          font-size: 10px;
+        }
+      }
+    }
+
     &.is-active {
       background-color: var(--color-white);
       color: var(--color-dark);
