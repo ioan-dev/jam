@@ -83,12 +83,25 @@
       height: 100%;
     }
 
-    //.swiper-slide-active {
-    //  width: 330px !important;
-    //  height: 330px !important;
-    //}
-
     .swiper-slide {
+      transition : scale 250ms ease-in-out;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0.5;
+
+      &.swiper-slide-active {
+        //scale: 2 !important;
+        opacity: 1;
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-next {
+        //scale               : 1.7;
+        //z-index             : 5;
+      }
+
+
       img {
         width: 100%;
         height: 100%;

@@ -1,24 +1,19 @@
 import '@/styles/main.scss'
 import Swiper from 'swiper';
-import { EffectCreative } from 'swiper/modules';
+import { EffectCreative, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 
 let initProjectSlider = new Swiper('.projects__slider .swiper', {
   direction: 'vertical',
-  modules: [EffectCreative],
-  slidesPerView: 5,
-  mousewheel: false,
-  centeredSlides: true,
+  modules: [Navigation],
   loop: true,
-  creativeEffect: {
-    prev: {
-      translate: [0, 0, 0],
-    },
-    next: {
-      translate: [0, '100%', 0],
-    },
-  }
+  slidesPerView: 4.5,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".projects__button-next",
+    prevEl: ".projects__button-prev"
+  },
 })
 
 class Filters {
