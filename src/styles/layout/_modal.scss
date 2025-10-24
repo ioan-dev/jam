@@ -1,7 +1,8 @@
 @use "../abstracts" as *;
 
 .modal {
-  display: none;
+  transform: translateX(100%);
+  transition: transform var(--transition-duration);
 
   position: absolute;
   top: 0;
@@ -28,7 +29,7 @@
 
 
   &.is-active {
-    display: block;
+    transform: translateX(0%);
   }
 
   &[data-modal="form"] {

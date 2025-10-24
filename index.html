@@ -32,7 +32,7 @@
     <div class="header__caption">
       Мануфактура креативных решений для бизнеса
     </div>
-    <button class="header__button btn">Связаться</button>
+    <button class="header__button btn" data-button="header-form">Связаться</button>
   </div>
 </header>
 
@@ -40,19 +40,34 @@
 <main class="main">
 
   <div class="main-slider">
-    <img src="/images/home-bg-01.jpg" alt="">
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="/images/home-bg-01.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/home-bg-02.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/images/home-bg-03.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <div class="main-bar">
     <!--Home bar-->
-    <div class="bar">
+    <div class="bar is-active">
       <div class="bar__buttons">
         <!--Скорее всего буду считывать data атрибуты и включать модалку соответсвующую-->
         <button class="bar__button is-active">Главная</button>
         <button class="bar__button">Проекты</button>
-        <button class="bar__button">Услуги</button>
-        <button class="bar__button">О нас</button>
-        <button class="bar__button">Контакты</button>
+        <button class="bar__button" data-button="services">Услуги</button>
+        <button class="bar__button" data-button="about">О нас</button>
+        <button class="bar__button" data-button="form">Контакты</button>
       </div>
       <div class="bar__dotter">
         <img src="/public/images/icons/dotter.svg" alt="">
@@ -274,7 +289,7 @@
   <div class="modal" data-modal="services">
     <div class="modal__inner">
       <div class="modal__header">
-        <h2 class="modal__title">О нас</h2>
+        <h2 class="modal__title">Услуги</h2>
         <button class="modal__close">
           <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.998 17L0.998044 0.999995" stroke="currentColor" stroke-width="1.5" />
@@ -475,7 +490,7 @@
 
     </div>
   </div>
-  <div class="modal is-active" data-modal="form">
+  <div class="modal" data-modal="form">
     <div class="modal__inner">
       <div class="modal__header">
         <h2 class="modal__title">Форма</h2>
