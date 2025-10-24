@@ -81,6 +81,11 @@
 
     .swiper {
       height: 100%;
+      //width: 100%;
+    }
+
+    .swiper-wrapper {
+      width: 100%;
     }
 
     .swiper-slide {
@@ -90,15 +95,16 @@
       overflow: hidden;
       opacity: 0.5;
 
+      scale: 0.5;
+
       &.swiper-slide-active {
-        //scale: 2 !important;
+        scale: 1;
         opacity: 1;
       }
 
       &.swiper-slide-prev,
       &.swiper-slide-next {
-        //scale               : 1.7;
-        //z-index             : 5;
+        scale               : 0.7;
       }
 
 
